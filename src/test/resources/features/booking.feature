@@ -14,4 +14,3 @@ Feature: Search hotel
     | Akra Kemer | Akra Kemer - Ultra All Inclusive |
     | Akra Kemer | Akra Kemer - Ultra All Inclusive |
     | Akra Kemer | Akra Kemer - Ultra All Inclusive |
-

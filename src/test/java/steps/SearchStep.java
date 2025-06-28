@@ -29,7 +29,6 @@ public class SearchStep {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
-
     @Given("booking search page is opened")
     public void bookingSearchPageIsOpened() {
         driver.get("https://www.booking.com/searchresults.en-gb.html");
@@ -73,6 +72,6 @@ public class SearchStep {
                         "/descendant::div[@data-testid = 'review-score']" +
                         "/child::div[@aria-hidden = 'true']"
         )).getText();
-        Assert.assertEquals(hotelRate,reviewScore);
+        Assert.assertEquals(hotelRate, reviewScore);
     }
 }
