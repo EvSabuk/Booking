@@ -64,13 +64,13 @@ public class SearchStep {
         }
     }
 
-    @And("hotel rate is {string}")
-    public void hotelRateIs(String hotelRate) {
-        String reviewScore = driver.findElement(By.xpath(
-                "//div[text()='Akra Kemer - Ultra All Inclusive']" +
+    @And("hotel {string} rate is {string}")
+    public void hotelRateIs(String hotelName, String hotelRate) {
+        String reviewScore = driver.findElement(By.xpath(String.format(
+                "//div[text()='%s']" +
                         "/ancestor::div[@data-testid = 'property-card-container']" +
                         "/descendant::div[@data-testid = 'review-score']" +
-                        "/child::div[@aria-hidden = 'true']"
+                        "/child::div[@aria-hidden = 'true']", hotelName)
         )).getText();
         Assert.assertEquals(hotelRate, reviewScore);
     }
