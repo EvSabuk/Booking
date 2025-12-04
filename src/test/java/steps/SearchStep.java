@@ -39,7 +39,7 @@ public class SearchStep {
         driver.findElement(By.name("ss")).sendKeys(hotel);
         Thread.sleep(5000);
         driver.findElement(By.xpath("//h3[text() = 'About']")).click();
-        Thread.sleep(5000);
+        Thread.sleep(52000);
         driver.findElement(By.cssSelector("[type='submit']")).click();
         Thread.sleep(5000);
     }
